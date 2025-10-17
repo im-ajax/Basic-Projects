@@ -160,7 +160,7 @@ void updateDoctor(struct Doctor doctors[],int doctorCount) {
     scanf("%d",&doctors[index].experienceYear);
     printf("Insert Doctor New Salary: ");
     scanf("%f",&doctors[index].salary);
-    printf("New Doctor Successfully updated at index %d\n",index);
+    printf("New Doctor Successfully updated at index %d\n",index+1);
 }
 void updatePatient(struct Patient patients[],int patientCount) {
     int index;
@@ -182,7 +182,7 @@ void updatePatient(struct Patient patients[],int patientCount) {
     scanf("%d", &patients[index].age);
     printf("Insert Patient New Due Payment: ");
     scanf("%f", &patients[index].duePayment);
-    printf("New Patient Successfully updated at index %d\n",index);
+    printf("New Patient Successfully updated at index %d\n",index+1);
 }
 void removeDoctor(struct Doctor doctors[],int *doctorCount) {
     int index;
@@ -197,7 +197,7 @@ void removeDoctor(struct Doctor doctors[],int *doctorCount) {
     for (int i=index;i<*doctorCount-1;i++)
         doctors[i]=doctors[i+1];
     (*doctorCount)--;
-    printf("Doctor successfully deleted from index %d\n",index);
+    printf("Doctor successfully deleted from index %d\n",index+1);
 }
 void removePatient(struct Patient patients[],int *patientCount) {
     int index;
@@ -212,7 +212,7 @@ void removePatient(struct Patient patients[],int *patientCount) {
     for (int i=index;i<*patientCount-1;i++)
         patients[i]=patients[i+1];
     (*patientCount)--;
-    printf("Patient successfully deleted from index %d\n",*patientCount);
+    printf("Patient successfully deleted from index %d\n",index-1);
 }
 void searchDoctorByName(struct Doctor doctors[],int doctorCount) {
     char name[100];
