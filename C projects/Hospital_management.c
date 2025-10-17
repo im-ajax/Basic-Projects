@@ -320,7 +320,7 @@ void doctorWithHighestExperience(struct Doctor doctors[],int doctorCount) {
         if (doctors[i].experienceYear>doctors[maxIndex].experienceYear)
             maxIndex=i;
     }
-    printf("Doctor Highest Experience\n");
+    printf("Doctor With Highest Experience\n");
     printf(".............................................................\n");
     printf("Index       : %d\n",maxIndex+1);
     printf("Name        : %s\n",doctors[maxIndex].name);
