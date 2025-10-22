@@ -15,6 +15,7 @@ struct Patient {
     int age;
     float duePayment;
 };
+
 void addDoctor(struct Doctor doctors[],int *doctorCount);
 void addPatient(struct Patient patients[],int *patientCount);
 void viewDoctors(struct Doctor doctors[],int doctorCount);
@@ -29,6 +30,8 @@ void searchDoctorBySpecialization(struct Doctor doctors[],int doctorCount);
 void searchPatientByDisease(struct Patient patients[],int patientCount);
 void doctorWithHighestExperience(struct Doctor doctors[],int doctorCount);
 void patientWithMaxDue(struct Patient patients[],int patientCount);
+
+
 int main() {
     struct Doctor doctors[100];
     struct Patient patients[100];
@@ -57,7 +60,12 @@ int main() {
         getchar();
         if(choice==1)viewDoctors(doctors,doctorCount);
         else if(choice==2)viewPatients(patients,patientCount);
+
+        
         else if(choice==3)addDoctor(doctors,&doctorCount);
+
+
+
         else if(choice==4)addPatient(patients,&patientCount);
         else if(choice==5)updateDoctor(doctors,doctorCount);
         else if(choice==6)updatePatient(patients,patientCount);
@@ -186,7 +194,7 @@ void updatePatient(struct Patient patients[],int patientCount) {
 }
 void removeDoctor(struct Doctor doctors[],int *doctorCount) {
     int index;
-    printf("Insert doctor index %d: ",*doctorCount);
+    printf("Insert doctor index: ");
     scanf("%d",&index);
     getchar();
     if (index<1||index>*doctorCount) {
@@ -201,7 +209,7 @@ void removeDoctor(struct Doctor doctors[],int *doctorCount) {
 }
 void removePatient(struct Patient patients[],int *patientCount) {
     int index;
-    printf("Insert patient index %d: ",*patientCount);
+    printf("Insert patient index: ");
     scanf("%d",&index);
     getchar();
     if (index<1||index>*patientCount) {
@@ -242,10 +250,10 @@ void searchDoctorBySpecialization(struct Doctor doctors[],int doctorCount) {
     char spec[100];
     int found_index;
     printf("Enter Specialization: ");
-    scanf(" %[^\n]", spec);
+    scanf(" %[^\n]",spec);
     bool flag=false;
-    for (int i = 0; i < doctorCount; i++) {
-        if (strcmp(doctors[i].specialization, spec) == 0) {
+    for (int i=0;i<doctorCount;i++){
+        if (strcmp(doctors[i].specialization,spec)==0) {
             flag=true;
             found_index=i;
         }
@@ -330,12 +338,12 @@ void doctorWithHighestExperience(struct Doctor doctors[],int doctorCount) {
     printf("Salary      : %.2f\n",doctors[maxIndex].salary);
 }
 void patientWithMaxDue(struct Patient patients[],int patientCount) {
-    if (patientCount == 0) {
+    if (patientCount ==0) {
         printf("No patients available.\n");
         return;
     }
     int maxIndex=0;
-    for (int i=1;i<patientCount;i++) {
+    for (int i=0;i<patientCount;i++) {
         if (patients[i].duePayment>patients[maxIndex].duePayment)
             maxIndex = i;
     }
@@ -348,4 +356,3 @@ void patientWithMaxDue(struct Patient patients[],int patientCount) {
     printf("Age         : %d\n",patients[maxIndex].age);
     printf("Due Payment : %.2f\n",patients[maxIndex].duePayment);
 }
-
