@@ -3,7 +3,7 @@ Psychic
 15 20 30 35 
 18 20 28 34 
 20 22 26 32 
-87.0
+87.000000
 ....................................
 
 Wednesday Addams
@@ -11,7 +11,7 @@ Psychic
 15 20 30 35 
 18 20 28 34 
 20 22 26 32 
-87.0
+87.000000
 ....................................
 
 Wednesday Addams
@@ -19,6 +19,34 @@ Psychic
 15 20 30 35 
 18 20 28 34 
 20 22 26 32 
-87.0
+87.000000
 ....................................
 
+Wednesday Addams
+Psychic
+15 20 30 35 
+18 20 28 34 
+20 22 26 32 
+87.000000
+....................................
+
+Student: 4
+Psychic total marks: 4
+Combat total marks: 3
+Monster total marks: 4
+....................................
+Student: 4
+Psychic total marks: 4
+Combat total marks: 3
+Monster total marks: 4
+....................................
+Student: 4
+Psychic total marks: 4
+Combat total marks: 3
+Monster total marks: 4
+....................................
+Student: 4
+Psychic total marks: 4
+Combat total marks: 3
+Monster total marks: 4
+....................................
