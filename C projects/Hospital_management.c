@@ -1,16 +1,14 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
-struct Doctor
-{
+struct Doctor{
     char name[50];
     char specialization[50];
     char phoneNo[11];
     int experienceYear;
     float salary;
 };
-struct Patient
-{
+struct Patient{
     char name[50];
     char disease[50];
     char phoneNo[11];
@@ -178,9 +176,9 @@ void updateDoctor(struct Doctor doctors[], int doctorCount)
         printf("Invalid index.\n");
         return;
     }
-    index--;
+    index--; // 0
     printf("Insert Doctor New Name: ");
-    scanf(" %[^\n]", doctors[index].name);
+    scanf(" %[^\n]", doctors[index].name); // 0
     printf("Insert Doctor New Specialization: ");
     scanf(" %[^\n]", doctors[index].specialization);
     printf("Insert Doctor New Phone No: ");
@@ -194,7 +192,7 @@ void updateDoctor(struct Doctor doctors[], int doctorCount)
 void updatePatient(struct Patient patients[], int patientCount)
 {
     int index;
-    printf("Insert patient index %d: ", patientCount);
+    printf("Insert patient index :");
     scanf("%d", &index);
     getchar();
     if (index < 1 || index > patientCount)
@@ -226,7 +224,7 @@ void removeDoctor(struct Doctor doctors[], int *doctorCount)
         printf("Invalid index.\n");
         return;
     }
-    index--;
+    index--;// 0
     for (int i = index; i < *doctorCount - 1; i++)
         doctors[i] = doctors[i + 1];
     (*doctorCount)--;
@@ -282,7 +280,7 @@ void searchDoctorBySpecialization(struct Doctor doctors[], int doctorCount)
 {
     char spec[100];
     int found_index;
-    printf("Enter Specialization: ");
+    printf("Enter Specialization: ");1
     scanf(" %[^\n]", spec);
     bool flag = false;
     for (int i = 0; i < doctorCount; i++)
