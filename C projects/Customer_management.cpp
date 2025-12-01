@@ -47,7 +47,8 @@ int main(){
 void input(struct Customers info[],int n){
         for(int i=0;i<n;i++){
         cout<<"Enter Customer Name: "<<endl;
-        cout<<"............................................................."<<endl;        getchar();
+        cout<<"............................................................."<<endl;
+        getchar();
         scanf("%[^\n]",info[i].name);
         cout<<"Enter Customer Phone Number: ";
         getchar();
